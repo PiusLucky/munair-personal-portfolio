@@ -1,7 +1,12 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import MainButton from "../common/MainButton";
+import { motion } from "framer-motion";
 
 function HeroSection() {
+
+
   return (
     <section className="flex flex-col gap-8 md:flex-row justify-between items-center">
       <div>
@@ -24,7 +29,31 @@ function HeroSection() {
         </div>
       </div>
       <div className="flex flex-col items-center gap-[35px]">
-        <img src="/images/hero_image.png" alt="hero image" />
+        <div className="relative">
+          <motion.img
+            transition={{
+              ease: "linear",
+              duration: 2,
+              x: { duration: 1 },
+            }}
+            src="/images/hero_image.png"
+            alt="hero image"
+          />
+          <motion.div
+            initial={{ scale: 0 }}
+            transition={{
+              duration: 2,
+              ease: "easeInOut",
+              times: [0, 0.5, 1],
+              loop: Infinity,
+              repeatDelay: 1,
+            }}
+            className="absolute top-[6rem] left-[5rem]"
+          >
+            <img src="/images/hero_shape.png" alt="hero image" />
+          </motion.div>
+        </div>
+
         <div className="flex gap-[25.03px]">
           <img src="/images/facebook.png" alt="facebook icon" />
           <img src="/images/twitter.png" alt="twitter icon" />

@@ -17,7 +17,7 @@ function AboutMeSection() {
         <img src="/images/about_me_image.png" alt="profile" />
       </div>
       <div className="md:w-[50%]">
-        <p className="text-2xl md:text-[65px] font-bold">About me</p>
+        <p className="text-2xl md:text-[65px] font-bold leading-[3.5rem]">About me</p>
         <p className="text-[21px] my-8">
           My design approach is focused on understanding the needs and behaviors
           of users to create engaging and seamless experiences. I believe that
