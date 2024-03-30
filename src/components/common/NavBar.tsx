@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { X } from "lucide-react";
+import { MenuIcon, X } from "lucide-react";
 import Link from "next/link";
+import MainButton from "./MainButton";
 
 function NavBar() {
   const [menu, setMenu] = useState(false);
@@ -16,23 +17,42 @@ function NavBar() {
       <div className=" hidden lg:block animate-in fade-in zoom-in bg-white p-4">
         <div className="flex justify-between mx-[41px] items-center">
           <div>
-            <img src="/svgs/sf_logo.svg" alt="logo" />
+            <img src="/images/logo.png" alt="logo" />
           </div>
           <div className="flex gap-[20px] xl:gap-[50px] text-[16px] items-center select-none">
             <p
               className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
             >
-              Link1
+              Home
             </p>
-            {/* Add more links here */}
+            <p
+              className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+            >
+              About Me
+            </p>
+            <p
+              className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+            >
+              Services
+            </p>
+            <p
+              className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+            >
+              Projects
+            </p>
+            <p
+              className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+            >
+              Testimonials
+            </p>
+            <p
+              className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+            >
+              Contact
+            </p>
           </div>
           <div className="flex items-center gap-[40px] select-none">
-            <Link
-              href="/auth/login"
-              className="hover:text-primary cursor-pointer flex items-center gap-2 "
-            >
-              Sign in
-            </Link>
+            <MainButton text="Download CV" classes="w-[188px]" />
           </div>
         </div>
       </div>
@@ -44,7 +64,7 @@ function NavBar() {
       >
         <div className="flex justify-between mx-[10px]">
           <div className="flex gap-[50px] text-[16px] items-center select-none">
-            <img src="/svgs/sf_logo.svg" alt="logo" className="w-[7rem]" />
+            <img src="/images/logo.png" alt="logo" className="w-[7rem]" />
           </div>
           <div className="flex items-center gap-[40px]">
             {menu ? (
@@ -53,11 +73,9 @@ function NavBar() {
                 onClick={toggleMenu}
               />
             ) : (
-              <img
-                src="/svgs/hamburger.svg"
-                alt="logo"
-                className="cursor-pointer animate-in fade-in zoom-in"
+              <MenuIcon
                 onClick={toggleMenu}
+                className="cursor-pointer animate-in fade-in zoom-in"
               />
             )}
           </div>
@@ -65,15 +83,39 @@ function NavBar() {
         {menu ? (
           <div className="my-8 select-none animate-in slide-in-from-right">
             <div className="flex flex-col gap-8 mt-8 mx-4">
-              <p className="text-black cursor-pointer">
-                <span>How it works</span>
+              <p
+                className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+              >
+                Home
               </p>
-              {/* Add more links here */}
+              <p
+                className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+              >
+                About Me
+              </p>
+              <p
+                className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+              >
+                Services
+              </p>
+              <p
+                className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+              >
+                Projects
+              </p>
+              <p
+                className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+              >
+                Testimonials
+              </p>
+              <p
+                className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
+              >
+                Contact
+              </p>
 
               <div className="flex flex-col gap-[40px] select-none">
-                <Link href="/auth/login" className="text-black cursor-pointer">
-                  Signin
-                </Link>
+                <MainButton text="Download CV" classes="w-[188px]" />
               </div>
             </div>
           </div>
