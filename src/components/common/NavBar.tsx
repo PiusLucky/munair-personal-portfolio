@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { MenuIcon, X } from "lucide-react";
-import Link from "next/link";
 import MainButton from "./MainButton";
 
 function NavBar() {
@@ -39,11 +38,6 @@ function NavBar() {
               className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
             >
               Projects
-            </p>
-            <p
-              className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
-            >
-              Testimonials
             </p>
             <p
               className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
@@ -102,11 +96,6 @@ function NavBar() {
                 className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
               >
                 Projects
-              </p>
-              <p
-                className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
-              >
-                Testimonials
               </p>
               <p
                 className={`hover:text-primary cursor-pointer flex items-center gap-2  font-[500] text-gray`}
